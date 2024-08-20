@@ -1,36 +1,34 @@
 /* General Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* Full-Screen Sections */
-.full-screen {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 1em;
+body.fade-out {
+    opacity: 0;
 }
 
+/* Header Section */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    background-color: #333;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
 header .logo h1 {
-    font-weight: 600;
+    color: #fff;
     margin: 0;
-    padding: 1em;
+    padding-left: 1em;
+    display: inline-block;
+    font-weight: 600;
 }
 
 header .nav-links {
@@ -39,49 +37,52 @@ header .nav-links {
     margin: 0;
     display: flex;
     justify-content: flex-end;
+    padding-right: 1em;
 }
 
 header .nav-links li {
-    margin-right: 2em;
+    margin-left: 2em;
 }
 
 header .nav-links a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
+    font-size: 1em;
     font-weight: 400;
-    padding: 1em 0;
-    transition: color 0.3s ease;
 }
 
 header .nav-links a:hover {
-    color: #0073e6;
+    text-decoration: underline;
 }
 
 /* Hero Section */
-#designs {
-    background: url('path/to/hero-image.jpg') no-repeat center center/cover;
+#home {
+    background-image: url('path/to/your/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: #fff;
 }
 
-#designs .hero-content h2 {
-    font-size: 4em;
+#home .hero-content h2 {
+    font-size: 3em;
     margin: 0;
     font-weight: 600;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
 }
 
-#designs .hero-content p {
+#home .hero-content p {
     font-size: 1.5em;
     margin-top: 1em;
     font-weight: 300;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 
-#designs .btn {
-    background-color: #0073e6;
-    color: #fff;
+#home .btn {
+    background-color: #fff;
+    color: #333;
     padding: 0.8em 2em;
     border-radius: 5px;
     text-decoration: none;
@@ -89,92 +90,64 @@ header .nav-links a:hover {
     font-weight: 600;
     margin-top: 2em;
     display: inline-block;
-    transition: background-color 0.3s ease;
 }
 
-#designs .btn:hover {
-    background-color: #005bb5;
+#home .btn:hover {
+    background-color: #eee;
 }
 
-/* Designs Section */
-#my-designs {
-    background-color: #fff;
+/* Container for Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 1em;
 }
 
-#my-designs h2 {
+/* T-Shirt Designs Section */
+#designs h2, #about h2 {
+    text-align: center;
     font-size: 2.5em;
+    font-weight: 600;
     margin-bottom: 1em;
 }
 
-.project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.design-gallery {
+    display: flex;
+    flex-wrap: wrap;
     gap: 2em;
-    padding: 0 1em;
+    justify-content: center;
 }
 
-.project-item {
-    background-color: #f9f9f9;
+.design-item {
+    background: #fff;
     padding: 1em;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    text-align: center;
 }
 
-.project-item img {
+.design-item img {
     max-width: 100%;
     border-radius: 8px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
-.project-item h3 {
-    font-size: 1.5em;
-    margin: 0.5em 0;
-}
-
-.project-item p {
-    font-size: 1em;
-}
-
-.project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.design-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 600;
 }
 
 /* About Me Section */
-#about-me {
-    background-color: #f4f4f4;
+#about {
+    background-color: #fff;
+    text-align: center;
 }
 
-#about-me .container {
+#about p {
+    font-size: 1.2em;
+    font-weight: 300;
     max-width: 800px;
     margin: 0 auto;
-}
-
-#about-me h2 {
-    font-size: 2.5em;
-    margin-bottom: 1em;
-}
-
-#about-me p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Decorative Image Section */
-.decorative-image {
-    text-align: center;
-    margin: 3em 0;
-}
-
-.decorative-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Smooth Scroll Behavior */
-html {
-    scroll-behavior: smooth;
 }
