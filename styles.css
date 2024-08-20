@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    color: #fff;
+    margin: 0;
+    padding-left: 1em;
+    display: inline-block;
+}
+
+header .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+}
+
+header .nav-links li {
+    margin-left: 2em;
+}
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+header .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#home {
+    background-image: url('path/to/your/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#home .hero-content h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#home .hero-content p {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+/* Container for Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 1em;
+}
+
+/* T-Shirt Designs Section */
+#designs h2, #about h2, #contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.design-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.design-item {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.design-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+.design-item h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 1em 2em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
