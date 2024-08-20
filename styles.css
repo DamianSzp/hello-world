@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -28,6 +28,7 @@ header .logo h1 {
     margin: 0;
     padding-left: 1em;
     display: inline-block;
+    font-weight: 600;
 }
 
 header .nav-links {
@@ -47,6 +48,7 @@ header .nav-links a {
     color: #fff;
     text-decoration: none;
     font-size: 1em;
+    font-weight: 400;
 }
 
 header .nav-links a:hover {
@@ -69,11 +71,13 @@ header .nav-links a:hover {
 #home .hero-content h2 {
     font-size: 3em;
     margin: 0;
+    font-weight: 600;
 }
 
 #home .hero-content p {
     font-size: 1.5em;
     margin-top: 1em;
+    font-weight: 300;
 }
 
 #home .btn {
@@ -83,6 +87,7 @@ header .nav-links a:hover {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2em;
+    font-weight: 600;
     margin-top: 2em;
     display: inline-block;
 }
@@ -99,9 +104,10 @@ header .nav-links a:hover {
 }
 
 /* T-Shirt Designs Section */
-#designs h2, #about h2, #contact h2 {
+#designs h2, #about h2 {
     text-align: center;
     font-size: 2.5em;
+    font-weight: 600;
     margin-bottom: 1em;
 }
 
@@ -130,9 +136,10 @@ header .nav-links a:hover {
 .design-item h3 {
     font-size: 1.2em;
     color: #333;
+    font-weight: 600;
 }
 
-/* About Section */
+/* About Me Section */
 #about {
     background-color: #fff;
     text-align: center;
@@ -140,43 +147,7 @@ header .nav-links a:hover {
 
 #about p {
     font-size: 1.2em;
+    font-weight: 300;
     max-width: 800px;
     margin: 0 auto;
-}
-
-/* Contact Section */
-#contact {
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-#contact p {
-    font-size: 1.2em;
-    margin-bottom: 2em;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 1em;
-    margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    padding: 1em 2em;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
 }
