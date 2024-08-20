@@ -5,6 +5,12 @@ body {
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
 }
 
 /* Header Section */
@@ -68,6 +74,21 @@ header .nav-links a:hover {
 #home .hero-content p {
     font-size: 1.5em;
     margin-top: 1em;
+}
+
+#home .btn {
+    background-color: #fff;
+    color: #333;
+    padding: 0.8em 2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 2em;
+    display: inline-block;
+}
+
+#home .btn:hover {
+    background-color: #eee;
 }
 
 /* Container for Sections */
