@@ -57,7 +57,7 @@ header .nav-links a:hover {
 
 /* Hero Section */
 #home {
-    background-image: url('path/to/your/hero-image.jpg');
+    background-image: url('graphics/greg-nsplash.jpg');
     background-size: cover;
     background-position: center;
     height: 90vh;
