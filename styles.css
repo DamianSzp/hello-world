@@ -1,34 +1,27 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
-body.fade-out {
-    opacity: 0;
-}
-
-/* Header Section */
 header {
-    background-color: #333;
-    padding: 1em 0;
-    position: sticky;
-    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
     width: 100%;
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 header .logo h1 {
-    color: #fff;
-    margin: 0;
-    padding-left: 1em;
-    display: inline-block;
     font-weight: 600;
+    margin: 0;
+    padding: 1em;
+    transition: color 0.3s ease;
 }
 
 header .nav-links {
@@ -37,30 +30,28 @@ header .nav-links {
     margin: 0;
     display: flex;
     justify-content: flex-end;
-    padding-right: 1em;
 }
 
 header .nav-links li {
-    margin-left: 2em;
+    margin-right: 2em;
 }
 
 header .nav-links a {
-    color: #fff;
     text-decoration: none;
-    font-size: 1em;
+    color: #333;
     font-weight: 400;
+    padding: 1em 0;
+    transition: color 0.3s ease;
 }
 
 header .nav-links a:hover {
-    text-decoration: underline;
+    color: #0073e6;
 }
 
 /* Hero Section */
-#home {
-    background-image: url('path/to/your/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
+#hero {
+    background: url('path/to/hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,21 +59,25 @@ header .nav-links a:hover {
     color: #fff;
 }
 
-#home .hero-content h2 {
-    font-size: 3em;
+#hero .hero-content h2 {
+    font-size: 4em;
     margin: 0;
     font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-#home .hero-content p {
+#hero .hero-content p {
     font-size: 1.5em;
     margin-top: 1em;
     font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 
-#home .btn {
-    background-color: #fff;
-    color: #333;
+#hero .btn {
+    background-color: #0073e6;
+    color: #fff;
     padding: 0.8em 2em;
     border-radius: 5px;
     text-decoration: none;
@@ -90,64 +85,106 @@ header .nav-links a:hover {
     font-weight: 600;
     margin-top: 2em;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-#home .btn:hover {
-    background-color: #eee;
+#hero .btn:hover {
+    background-color: #005bb5;
 }
 
-/* Container for Sections */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3em 1em;
-}
-
-/* T-Shirt Designs Section */
-#designs h2, #about h2 {
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 5em 0;
     text-align: center;
+}
+
+#projects h2 {
     font-size: 2.5em;
-    font-weight: 600;
     margin-bottom: 1em;
 }
 
-.design-gallery {
-    display: flex;
-    flex-wrap: wrap;
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
-    justify-content: center;
+    padding: 0 1em;
 }
 
-.design-item {
-    background: #fff;
+.project-item {
+    background-color: #f9f9f9;
     padding: 1em;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.design-item img {
+.project-item img {
     max-width: 100%;
     border-radius: 8px;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
-.design-item h3 {
-    font-size: 1.2em;
-    color: #333;
-    font-weight: 600;
+.project-item h3 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.project-item p {
+    font-size: 1em;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* About Me Section */
-#about {
-    background-color: #fff;
+#about-me {
+    background-color: #f4f4f4;
+    padding: 5em 0;
     text-align: center;
 }
 
-#about p {
-    font-size: 1.2em;
-    font-weight: 300;
+#about-me .container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+#about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+#about-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .nav-links li {
+        margin: 0.5em 0;
+    }
+
+    #hero .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    #hero .hero-content p {
+        font-size: 1.2em;
+    }
+
+    #projects h2 {
+        font-size: 2em;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
 }
