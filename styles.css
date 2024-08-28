@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Bungee Tint", sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -15,7 +15,7 @@ body.fade-out {
 
 /* Header Section */
 header {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.3);
     padding: 1em 0; /* Padding for header content */
     position: fixed; /* Fixed positioning for header */
     top: 0;
@@ -33,6 +33,8 @@ header {
 header .logo {
     flex: 1; /* Allow logo to take up available space */
     text-align: center; /* Center the text inside the logo container */
+    color: #fff;
+    font-size: 1.3em;
 }
 
 /* Navigation Links */
@@ -70,7 +72,7 @@ header .nav-links a:hover {
 
 /* Hero Section */
 #home {
-    background-image: url('graphics/greg-nsplash.jpg');
+    background-image: url('graphics/thomas-heintz.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -103,10 +105,12 @@ header .nav-links a:hover {
     font-weight: 600;
     margin-top: 2em;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 #home .btn:hover {
     background-color: #eee;
+    transform: scale(1.05);
 }
 
 /* Container for Sections */
@@ -116,34 +120,39 @@ header .nav-links a:hover {
 
 /* Designs Section */
 #designs {
-    background-image: url('graphics/greg-nsplash.jpg'); /* Add your background image URL */
+    background-image: url('graphics/thomas-heintz.jpg'); /* Background image */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
-    background-attachment: fixed; /* Optional: Fixed background image */
-    padding: 12em 1em; /* Adjust padding to move content down slightly */
-    height: 100vh; /* Full viewport height */
+    background-attachment: fixed; /* Fixed background image */
+    padding: 12em 1em; /* Adjust padding */
+    min-height: 100vh; /* Ensure section covers full viewport height */
     display: flex;
-    justify-content: center; /* Center gallery horizontally */
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
 }
 
+/* Section Heading */
 #designs h2 {
+    color: #fff;
     text-align: center;
     font-size: 2.5em;
     font-weight: 600;
     margin-bottom: 2em;
-    width: 100%; /* Ensure heading does not interfere with the gallery */
+    width: 100%;
 }
 
 /* Gallery Container */
 .design-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6em;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%; /* Adjust width to make gallery larger */
-    max-height: 80vh; /* Limit height of the gallery to fit within the viewport */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 8em; /* Space between items */
+    justify-content: center; /* Center the grid content */
+    align-items: start;
+    width: 100%;
+    max-width: 1920px; /* Constrain the gallery width */
+    /* Remove max-height to fit all items without scrolling */
+    padding: 0 1em; /* Optional: add padding on the sides */
+    /* Remove overflow behavior */
 }
 
 /* Design Item */
@@ -153,22 +162,34 @@ header .nav-links a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
-    width: 350px; /* Larger width for design items */
-    height: 250px; /* Set a fixed height */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 400px; /* Increased height for larger images */
 }
 
 .design-item img {
     width: 100%;
     height: 100%; /* Ensure image fills the container */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio */
     display: block;
-    border-radius: inherit; /* Ensure image corners match the container */
+    border-radius: inherit; /* Match image corners with container */
 }
 
 .design-item:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .design-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .design-gallery {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
 }
 
 /* Lightbox Modal */
@@ -209,7 +230,7 @@ header .nav-links a:hover {
 
 /* About Me Section */
 #about {
-    background-image: url('graphics/greg-nsplash.jpg'); /* Add your background image URL */
+    background-image: url('graphics/thomas-heintz.jpg'); /* Add your background image URL */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     text-align: center;
@@ -226,4 +247,51 @@ header .nav-links a:hover {
     max-width: 800px;
     color: #000;
     margin: 0; /* Remove default margin */
+}
+
+/* Footer Styles */
+footer {
+    background-image: url('graphics/annie-spratt.jpg'); /* Add your background image URL */
+    color: #fff;
+    text-align: center;
+    padding: 2em 1em;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+footer .social-links li {
+    display: inline-block;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #ddd;
 }
